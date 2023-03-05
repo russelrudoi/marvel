@@ -19,17 +19,17 @@ const App = () => {
                     <main>
                         <Suspense fallback={<span>Loading</span>}>
                             <Routes>
-                                <Route path="/" element={<MainPage/>} />
-                                <Route path="/comics" element={<ComicsPage/>} />
+                                <Route path="/marvel/" element={<MainPage/>} />
+                                <Route path="/marvel/comics" element={<ComicsPage/>} />
                                 <Route path="*" element={<Page404/>} />
                                 <Route 
-                                    path="/comics/:id" 
+                                    path="/marvel/comics/:id" 
                                     element={<SinglePage 
                                         Component={SingleComicLayout} 
                                         dataType ='comic' />} 
                                 />
                                 <Route 
-                                    path="/characters/:id" 
+                                    path="/marvel/characters/:id" 
                                     element={<SinglePage 
                                             Component={SingleCharacterLayout} 
                                             dataType ='character' />}
